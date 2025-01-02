@@ -1,5 +1,3 @@
-/* eslint-disable */
-// @ts-nocheck
 import { NextResponse } from 'next/server'
 
 const products = [
@@ -10,6 +8,8 @@ const products = [
   { id: 5, name: 'Product 5', price: 59.99, description: 'This is product 5', image: '/placeholder.svg?text=Product 5' },
 ]
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 export async function GET(
   request: Request,
   { params }: { params: { id: string } }
