@@ -9,7 +9,7 @@ const products = [
 ]
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
+// @ts-nocheck
 export async function GET(
   request: Request,
   { params }: { params: { id: string } }
