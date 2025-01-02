@@ -12,7 +12,7 @@ export default function About() {
         <div className="md:flex items-center mb-8">
           
           <div className="md:w-1/2 mb-6 md:mb-0">
-            <Image src="/placeholder.svg?text=TechHub+Story" alt="Our Story" width={500} height={300} className="rounded-lg" />
+            <Image src="/images/AboutUs.jpg" alt="Our Story" width={600} height={300} className="rounded-lg" />
           </div>
           
           <div className="md:w-1/2 md:pl-8">
