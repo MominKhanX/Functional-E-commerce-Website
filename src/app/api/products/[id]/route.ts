@@ -10,22 +10,11 @@ const products = [
 
 // Suppress TypeScript error for invalid `params` type
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-<<<<<<< HEAD
 // @ts-ignore
 export async function GET(request: Request, { params }: { params: { id: string } }) {
   const id = parseInt(params.id);
   const product = products.find((p) => p.id === id);
 
-=======
-// @ts-nocheck
-export async function GET(
-  request: Request,
-  { params }: { params: { id: string } }
-) {
-  const id = parseInt(params.id)
-  const product = products.find(p => p.id === id)
-  
->>>>>>> 7d3c416cf95ad5dd9f334604ff2cbbe1688d98ea
   if (!product) {
     return new NextResponse('Product not found', { status: 404 });
   }
