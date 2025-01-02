@@ -8,9 +8,11 @@ const products = [
   { id: 5, name: 'Product 5', price: 59.99, description: 'This is product 5', image: '/placeholder.svg?text=Product 5' },
 ];
 
-// Correctly handle dynamic params for the GET function
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
-  const id = parseInt(params.id);
+export async function GET(
+  req: NextRequest,
+  context: { params: Record<string, string> } // Correctly typing the second argument
+) {
+  const id = parseInt(context.params.id, 10); // Parse ID from params
   const product = products.find((p) => p.id === id);
 
   if (!product) {
